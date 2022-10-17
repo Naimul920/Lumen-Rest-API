@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 class MyController extends Controller
 {
     function Catch(Request $request){
-        return $request->header("name");
+        return $request;
     }
 
 }
