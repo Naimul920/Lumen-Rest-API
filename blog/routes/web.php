@@ -1,5 +1,4 @@
 <?php
-use App\Http\Controllers\MyController;
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
@@ -14,4 +13,6 @@ use App\Http\Controllers\MyController;
 |
 */
 
-$router->post('/catch','MyController@Catch');
+$router->get('/', function () use ($router) {
+    return $router->app->version();
+});
